@@ -1,5 +1,4 @@
 # AirBnB clone - The console
- <img src="https://i.guim.co.uk/img/media/2fc3cf3efdcd35b1ac761bb4af0d209ba5d65908/9_139_3867_2320/master/3867.jpg" alt="cover" />
 
 ## Description
 
