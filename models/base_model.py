@@ -35,7 +35,7 @@ class BaseModel:
     Prints string rep of BaseModel object.
     [<class name>] (<self.id>) <self.__dict__>
     """
-    return "[{}] ({}) {}".format(type(self).__name__, self.id,self.__dict__)
+    return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
     """
