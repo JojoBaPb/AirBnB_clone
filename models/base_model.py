@@ -55,8 +55,10 @@ class BaseModel:
     * 'created_at' and 'updated_at' to be converted to string object in ISO
     format
     """
-    dict1 = self.__dict__.copy()
-    dict1['__class__'] = self.__class__.__name__
-    dict1['created_at'] = self.created_at.isoformat()
-    dict1['updated_at'] = self.updated_at.isoformat()
-    return dict1
+    dict_1 = self.__dict__.copy()
+    dict_1["__class__"] = self.__class__.__name__
+    for k, v in self.__dict__.items():
+        if k in ("created_at", "updated_at"):
+            v = self.__dict__[k].isoformat()
+            dict_1[k] = v
+    return dict_1
