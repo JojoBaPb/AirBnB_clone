@@ -57,9 +57,7 @@ class BaseModel:
     format
     """
     dict1 = self.__dict__.copy()
-    dict1["__class__"] = self.__class__.__name__
-    for k, v in self.__dict__.items():
-        if k in ("created_at", "updated_at"):
-            v = self.__dict__[k].isoformat()
-            dict1[k] = v
+    dict1['__class__'] = self.__class__.__name__
+    dict1['created_at'] = self.created_at.isoformat()
+    dict1['updated_at'] = self.updated_at.isoformat()
     return dict1
