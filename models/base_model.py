@@ -58,8 +58,8 @@ class BaseModel:
     """
     dict1 = self.__dict__.copy()
     dict1["__class__"] = self.__class__.__name__
-    for x, y in self.__dict__.items():
-        if x in ("created_at", "updated_at"):
-            y = self.__dict__[x].isoformat()
-            dict1[x] = y
+    for k, v in self.__dict__.items():
+        if k in ("created_at", "updated_at"):
+            v = self.__dict__[k].isoformat()
+            dict1[k] = v
     return dict1
